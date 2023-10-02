@@ -1,0 +1,45 @@
+@import '@/styles/variables';
+
+.btn-multi-states {
+  transition: ease $timing;
+  transition-property: color, background;
+  overflow: hidden;
+}
+
+.state {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+
+  svg {
+    transform: scale(0.75);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $timing ease;
+  transition-property: opacity, transform;
+}
+
+.fade-enter-from,
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.fade-enter-from {
+  transform: translateY(-150%);
+}
+
+.fade-enter-to {
+  transform: translateY(-50%);
+}
+
+.fade-leave-from {
+  transform: translateY(-50%);
+}
+
+.fade-leave-to {
+  transform: translateY(150%);
+}

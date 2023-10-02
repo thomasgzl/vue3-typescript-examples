@@ -1,0 +1,24 @@
+@import '@/styles/variables';
+
+.slot {
+  height: 100%;
+}
+
+:global(.partial-reload) {
+  animation: 1s linear infinite alternate easeOpacity;
+  pointer-events: none;
+}
+
+.spinner {
+  height: 100%;
+}
+
+@keyframes easeOpacity {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}

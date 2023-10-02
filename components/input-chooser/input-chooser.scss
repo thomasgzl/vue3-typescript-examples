@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+
+.input-chooser {
+  .axis-y {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .axis-x {
+    display: flex;
+    flex-direction: row;
+
+    label {
+      margin-right: $spacer;
+    }
+  }
+
+  .required {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transform: translateX(-30px);
+    margin-bottom: 0;
+    width: 0;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: $red;
+    font-size: $fs-sm;
+    font-weight: $fw-md;
+  }
+
+  input[disabled] + label {
+    cursor: not-allowed;
+  }
+}

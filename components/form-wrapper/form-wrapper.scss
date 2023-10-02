@@ -1,0 +1,19 @@
+@import '@/styles/variables';
+
+.form-wrapper {
+  &__form {
+    &__tool-bar {
+      display: flex;
+      justify-content: flex-end;
+
+      > * {
+        flex-shrink: 0;
+        max-width: 100%;
+      }
+
+      > :not(:last-child) {
+        margin: 0 $spacer * 0.5 0 0;
+      }
+    }
+  }
+}
